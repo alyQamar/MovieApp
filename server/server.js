@@ -1,8 +1,12 @@
 const express = require("express");
 const dotenv = require("dotenv"); // setup environment variables
 const morgan = require("morgan"); // setup requests logger middleware
+const dbConnection = require("./config/database");
 
 dotenv.config({ path: "config.env" });
+
+// DB Connection
+dbConnection();
 
 // Express App
 const app = express();
