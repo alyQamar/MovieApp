@@ -1,18 +1,15 @@
-const express = require("express");
+const http = require("http");
+const app = require("./app");
 const dotenv = require("dotenv"); // setup environment variables
 const morgan = require("morgan"); // setup requests logger middleware
 const dbConnection = require("./config/database");
+
+const server = http.createServer(app);
 
 dotenv.config({ path: "config.env" });
 
 // DB Connection
 dbConnection();
-
-// Express App
-const app = express();
-
-// Middleware
-app.use(express.json());
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -20,6 +17,6 @@ if (process.env.NODE_ENV === "development") {
 }
 
 const PORT = process.env.PORT || 9000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`listening on port: ${PORT}`);
 });
