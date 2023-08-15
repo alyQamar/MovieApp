@@ -1,0 +1,15 @@
+.img_banner {
+    max-height: 1000px;
+    width: 100%;     
+    
+  }
+  
+
+  @media only screen and (max-width: 700px ),(min-height: 700px){
+    .img_banner {
+        width: auto;
+        height: auto;
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Great+Vibes&family=Lobster&family=Rubik+Wet+Paint&display=swap');

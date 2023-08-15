@@ -1,5 +1,12 @@
-.banner-image {
-    background-image: url(src/assets/banner.jpg);
-    background-size:cover;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.hamda {
+    background-image: url(https://onaircode.com/wp-content/uploads/2017/11/Gradient-CSS-Background.jpg);
+    background-size: cover;
+}
 
+
+
+
+::placeholder {
+    color: white;
+  }

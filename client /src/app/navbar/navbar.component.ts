@@ -14,13 +14,13 @@ export class NavbarComponent {
     const nav :HTMLElement|null = document.querySelector('nav');
     const items :any = document.querySelectorAll('.nav-link');
     if (window.pageYOffset > 100) {
-      nav?.classList.add('bg-warning',);
+      nav?.classList.add('hamda',);
       items.forEach((element:HTMLElement) => {
         element?.classList.replace('text-white','text-dark');
       });
 
     } else {
-      nav?.classList.remove('bg-warning', );
+      nav?.classList.remove('hamda', );
       items.forEach((element:HTMLElement) => {
         element?.classList.replace('text-dark','text-white');
 
