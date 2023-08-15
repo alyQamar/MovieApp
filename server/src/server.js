@@ -1,7 +1,7 @@
 const http = require("http");
-const app = require("./middlewares/app");
 const dotenv = require("dotenv"); // setup environment variables
 const morgan = require("morgan"); // setup requests logger middleware
+const app = require("./middlewares/app");
 const dbConnection = require("./config/database");
 
 const server = http.createServer(app);
