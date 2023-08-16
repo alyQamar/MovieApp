@@ -7,11 +7,12 @@ import { Observable } from 'rxjs';
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
+
 export class BannerComponent implements OnInit {
   constructor(private  api:MoviesServiceService) {}
   movies:any[]=[];
   ngOnInit():void{
-    this.api.TopRated(1,20).subscribe({next:(data:[])=>{
+    this.api.TopRated(1,5).subscribe({next:(data:[])=>{
       this.movies = data
     }})
   }

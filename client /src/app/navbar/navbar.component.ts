@@ -1,10 +1,13 @@
 import { Component ,HostListener, Renderer2 } from '@angular/core';
+import {MatIconModule} from '@angular/material/icon'
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
+ 
 })
 export class NavbarComponent {
 
