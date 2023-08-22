@@ -1,0 +1,36 @@
+:root{
+    --dark-color: #0f1b2e;
+}
+.subscribe {
+    background-color: rgb(243, 208, 9);
+    font-family: sans-serif;
+}
+.subscribe input[type="text"]{
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+
+
+.footer{
+    font-family: sans-serif;
+}
+
+
+.footer .contact ul{
+    width: 20px;
+    height: 20px;
+}
+
+ .facebook{
+    background-color: #1877f2;
+}
+.twitter{
+    background-color: #1da1f2;
+}
+.linkedin{
+    background-color: #0077b5;
+}
+.youtube{
+    background-color: #ff0000;
+}

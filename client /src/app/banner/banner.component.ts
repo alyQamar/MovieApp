@@ -11,10 +11,17 @@ import { Observable } from 'rxjs';
 export class BannerComponent implements OnInit {
   constructor(private  api:MoviesServiceService) {}
   movies:any[]=[];
+  all_movies:any [] =[]
   ngOnInit():void{
-    this.api.TopRated(1,5).subscribe({next:(data:[])=>{
+    this.api.TopRated(1,6).subscribe({next:(data:[])=>{
       this.movies = data
+      console.log(this.movies)
     }})
+
+
+
   }
+
+  
 
 }

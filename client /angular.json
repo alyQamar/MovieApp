@@ -26,7 +26,11 @@
             ],
             "styles": [
               "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
+              "./node_modules/@videogular/ngx-videogular/fonts/videogular.css"
+  
+              
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
@@ -92,7 +96,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@fancyapps/ui/dist/fancybox/fancybox.css",
+              "./node_modules/@videogular/ngx-videogular/fonts/videogular.css"
+
             ],
             "scripts": [
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
