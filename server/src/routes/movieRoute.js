@@ -5,7 +5,6 @@ const {
   updateMovieValidator,
   deleteMovieValidator,
 } = require("../utils/validators/movieValidator");
-
 const {
   getMovies,
   getMovie,
@@ -14,12 +13,37 @@ const {
   deleteMovie,
 } = require("../services/movieService");
 
+const authService = require("../services/authService");
+
 const router = express.Router();
 
-router.route("/").get(getMovies).post(createMovieValidator, createMovie);
+router
+  .route("/")
+  .get(authService.auth, authService.allowedTo("admin"), getMovies)
+  .post(
+    authService.auth,
+    authService.allowedTo("admin"),
+    createMovieValidator,
+    createMovie
+  );
 router
   .route("/:id")
-  .get(getMovieValidator, getMovie)
-  .put(updateMovieValidator, updateMovie)
-  .delete(deleteMovieValidator, deleteMovie);
+  .get(
+    authService.auth,
+    authService.allowedTo("admin"),
+    getMovieValidator,
+    getMovie
+  )
+  .put(
+    authService.auth,
+    authService.allowedTo("admin"),
+    updateMovieValidator,
+    updateMovie
+  )
+  .delete(
+    authService.auth,
+    authService.allowedTo("admin"),
+    deleteMovieValidator,
+    deleteMovie
+  );
 module.exports = router;

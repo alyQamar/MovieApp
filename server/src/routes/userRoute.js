@@ -18,6 +18,7 @@ const {
   resizeImage,
   changeUserPassword,
 } = require("../services/userService");
+const authService = require("../services/authService");
 
 const router = express.Router();
 
@@ -28,11 +29,35 @@ router.put(
 );
 router
   .route("/")
-  .get(getUsers)
-  .post(uploadUserImage, resizeImage, createUserValidator, createUser);
+  .get(authService.auth, authService.allowedTo("admin"), getUsers)
+  .post(
+    authService.auth,
+    authService.allowedTo("admin"),
+    uploadUserImage,
+    resizeImage,
+    createUserValidator,
+    createUser
+  );
 router
   .route("/:id")
-  .get(getUserValidator, getUser)
-  .put(uploadUserImage, resizeImage, updateUserValidator, updateUser)
-  .delete(deleteUser, deleteUserValidator);
+  .get(
+    authService.auth,
+    authService.allowedTo("admin"),
+    getUserValidator,
+    getUser
+  )
+  .put(
+    authService.auth,
+    authService.allowedTo("admin"),
+    uploadUserImage,
+    resizeImage,
+    updateUserValidator,
+    updateUser
+  )
+  .delete(
+    authService.auth,
+    authService.allowedTo("admin"),
+    deleteUser,
+    deleteUserValidator
+  );
 module.exports = router;
