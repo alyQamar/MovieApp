@@ -17,11 +17,19 @@ const {
   uploadUserImage,
   resizeImage,
   changeUserPassword,
+  getLoggedUserData,
 } = require("../services/userService");
 const authService = require("../services/authService");
 
 const router = express.Router();
 
+router.get(
+  "/getMe",
+  authService.auth,
+  authService.allowedTo("user"),
+  getLoggedUserData,
+  getUser
+);
 // admin
 router.use(authService.auth, authService.allowedTo("admin"));
 
