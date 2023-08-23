@@ -11,6 +11,19 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import { MovieComponent } from './movie/movie.component';
+import { ShowsComponent } from './shows/shows.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { VdoPlayerComponent } from './vdo-player/vdo-player.component';
+
+import { VgCoreModule, } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -20,7 +33,15 @@ import {MatCardModule} from '@angular/material/card';
     BannerComponent,
     MoviesComponent,
     TvshowComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    MovieComponent,
+    ShowsComponent,
+    VdoPlayerComponent,
+  
+    SigninComponent,
+    SignupComponent,
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -29,6 +50,13 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonToggleModule,
     MatIconModule,
     MatCardModule,
+    FontAwesomeModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+    MatPaginatorModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
