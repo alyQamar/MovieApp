@@ -1,16 +1,21 @@
 {
   "dependencies": {
     "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "express-validator": "^7.0.1",
     "fs": "^0.0.1-security",
-    "google-translate-api": "^2.3.0",
-    "mongoose": "^7.4.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^6.0.13",
     "morgan": "^1.10.0",
-    "slugify": "^1.6.6"
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.4",
+    "sharp": "^0.32.5",
+    "slugify": "^1.6.6",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

@@ -5,6 +5,8 @@ const globalError = require("./errorMiddleware");
 const categoryRoute = require("../routes/categoryRoute");
 // const actorRoute = require("../../../draft/actor/actorRoute");
 const movieRoute = require("../routes/movieRoute");
+const userRoute = require("../routes/userRoute");
+const authRoute = require("../routes/authRoute");
 
 const app = express();
 app.use(express.json());
@@ -13,6 +15,10 @@ app.use(express.json());
 app.use("/categories", categoryRoute);
 // app.use("/actors", actorRoute);
 app.use("/movies", movieRoute);
+
+app.use("/users", userRoute);
+
+app.use("/auth", authRoute);
 
 // Handle Unhandled Routes and Send Error to Error Handling Middleware
 app.all("*", (req, res, next) => {

@@ -1,6 +1,7 @@
 const { check } = require("express-validator");
 const validatorMiddleware = require("../../middlewares/validatorMiddleware");
 const Category = require("../../models/categoryModel");
+
 exports.createMovieValidator = [
   check("title")
     .notEmpty()
@@ -41,41 +42,6 @@ exports.createMovieValidator = [
         }
       })
     ),
-
-  // check("subcategories")
-  //   .optional()
-  //   .isMongoId()
-  //   .withMessage("Invalid Movie subcategories ID format")
-  //   // @desc: Validate Subcategories Existence in Our DB
-  //   .custom((subCategoriesIds) =>
-  //     SubCategory.find({ _id: { $exists: true, $in: subCategoriesIds } }).then(
-  //       (result) => {
-  //         if (result.length < 1 || result.length !== subCategoriesIds.length) {
-  //           return Promise.reject(new Error(`Invalid Movie subCategories IDs`));
-  //         }
-  //       }
-  //     )
-  //   )
-  //   // @desc: Validate That Subcategories Belong to Category
-  //   .custom((val, { req }) =>
-  //     SubCategory.find({ category: req.body.category }).then(
-  //       (subcategories) => {
-  //         const subCategoriesIdsInDB = [];
-
-  //         subcategories.forEach((subCategory) => {
-  //           subCategoriesIdsInDB.push(subCategory._id.toString());
-  //         });
-  //         // check if subcategories ids in db include subcategories in req.body (true/false)
-  //         const checker = (target, arr) => target.every((v) => arr.includes(v));
-
-  //         if (!checker(val, subCategoriesIdsInDB)) {
-  //           return Promise.reject(
-  //             new Error(`Subcategories not belong to given Category`)
-  //           );
-  //         }
-  //       }
-  //     )
-  //   ),
 
   check("actors")
     .optional()
