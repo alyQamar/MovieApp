@@ -3,20 +3,17 @@ const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const asyncHandler = require("express-async-handler");
+
 const ApiError = require("../utils/apiError");
 const User = require("../models/userModel");
 const sendEmail = require("../utils/sendEmail");
+const createToken = require("../utils/createToken");
 
-const createToken = (payload) =>
-  jwt.sign({ userId: payload }, process.env.JWT_SECRET_KEY, {
-    expiresIn: process.env.JWT_EXPIRE_TIME,
-  });
 /**
  * @desc Signup
  * @route POST /auth/signup
  * @access Public
  */
-
 exports.signup = asyncHandler(async (req, res, next) => {
   // 1-Create user
   const user = await User.create({
@@ -26,6 +23,7 @@ exports.signup = asyncHandler(async (req, res, next) => {
   });
   //   2-Generate token
   const token = createToken(user._id);
+
   res.status(200).json({ data: user, token });
 });
 
@@ -34,7 +32,6 @@ exports.signup = asyncHandler(async (req, res, next) => {
  * @route POST /auth/login
  * @access Public
  */
-
 exports.login = asyncHandler(async (req, res, next) => {
   // 1) check if password and email in body
 
@@ -46,6 +43,9 @@ exports.login = asyncHandler(async (req, res, next) => {
 
   // 3) Generate token
   const token = createToken(user._id);
+
+  // 4) Delete password from response
+  delete user._doc.password;
 
   // 5) Send response
   res.status(200).json({ data: user, token });
@@ -66,7 +66,7 @@ exports.auth = asyncHandler(async (req, res, next) => {
   }
 
   if (!token) {
-    return next(new ApiError(401, "Please login first to access this route."));
+    return next(new ApiError("Please login first to access this route.", 401));
   }
   // [x] 2) verify token (no change happens,expired token)
   const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
@@ -105,9 +105,9 @@ exports.auth = asyncHandler(async (req, res, next) => {
  */
 // ["admin,"user]
 exports.allowedTo = (...roles) =>
-  // [x] 1) Access roles
-  // [x] 2) Access registered users (req.user.role)
   asyncHandler(async (req, res, next) => {
+    // [x] 1) Access roles
+    // [x] 2) Access registered users (req.user.role)
     if (!roles.includes(req.user.role)) {
       return next(
         new ApiError("You are not allowed to access this route", 403)
