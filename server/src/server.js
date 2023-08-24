@@ -1,10 +1,16 @@
 const http = require("http");
 const dotenv = require("dotenv"); // setup environment variables
 const morgan = require("morgan"); // setup requests logger middleware
+const cors = require("cors");
+const compression = require("compression");
 const app = require("./middlewares/app");
 const dbConnection = require("./config/database");
 
 const server = http.createServer(app);
+
+app.use(cors);
+app.options("*", cors());
+app.use(compression);
 
 dotenv.config({ path: "config.env" });
 
