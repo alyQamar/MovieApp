@@ -1,6 +1,7 @@
 const express = require("express");
 const ApiError = require("../utils/apiError");
 const globalError = require("./errorMiddleware");
+var cors = require('cors')
 // Routes
 const categoryRoute = require("../routes/categoryRoute");
 // const actorRoute = require("../../../draft/actor/actorRoute");
@@ -9,7 +10,9 @@ const userRoute = require("../routes/userRoute");
 const authRoute = require("../routes/authRoute");
 
 const app = express();
+
 app.use(express.json());
+app.use(cors())
 
 // Mount Routes
 app.use("/categories", categoryRoute);
