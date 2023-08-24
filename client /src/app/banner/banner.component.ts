@@ -1,6 +1,5 @@
 import { Component , OnInit } from '@angular/core';
 import { MoviesServiceService } from '../movies-service.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-banner',
@@ -10,12 +9,15 @@ import { Observable } from 'rxjs';
 
 export class BannerComponent implements OnInit {
   constructor(private  api:MoviesServiceService) {}
-  movies:any[]=[];
-  all_movies:any [] =[]
+  all_movies:any;
   ngOnInit():void{
-    this.api.TopRated(1,6).subscribe({next:(data:[])=>{
-      this.movies = data
-      console.log(this.movies)
+    // this.api.TopRated(1,6).subscribe({next:(data:[])=>{
+    //   this.movies = data
+    //   console.log(this.movies.data)
+    // }})
+
+    this.api.getMovies(1,15).subscribe({next:(data:any)=>{
+      this.all_movies = data
     }})
 
 

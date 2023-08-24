@@ -15,7 +15,7 @@ import { MovieComponent } from './movie/movie.component';
 import { ShowsComponent } from './shows/shows.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { VdoPlayerComponent } from './vdo-player/vdo-player.component';
-
+import { FormsModule } from '@angular/forms';
 import { VgCoreModule, } from '@videogular/ngx-videogular/core';
 import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
@@ -24,6 +24,8 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FooterComponent } from './footer/footer.component';
+import { ShowmovieComponent } from './showmovie/showmovie.component';
+import { ShowtvComponent } from './showtv/showtv.component';
 
 
 @NgModule({
@@ -37,10 +39,11 @@ import { FooterComponent } from './footer/footer.component';
     MovieComponent,
     ShowsComponent,
     VdoPlayerComponent,
-  
     SigninComponent,
     SignupComponent,
     FooterComponent,
+    ShowmovieComponent,
+    ShowtvComponent,
     
   ],
   imports: [
@@ -56,6 +59,7 @@ import { FooterComponent } from './footer/footer.component';
     VgOverlayPlayModule,
     VgBufferingModule,
     MatPaginatorModule,
+    FormsModule,
 
   ],
   providers: [],

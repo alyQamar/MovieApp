@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {VgApiService} from '@videogular/ngx-videogular/core';
 
 
@@ -12,6 +12,7 @@ import {VgApiService} from '@videogular/ngx-videogular/core';
 })
 export class VdoPlayerComponent implements OnInit{
 
+  @Input() video:any;
   preload: string = 'auto';
   constructor( private api:VgApiService) {}
   onPlayerReady(api: VgApiService) {
@@ -19,6 +20,7 @@ export class VdoPlayerComponent implements OnInit{
 }
   ngOnInit() {
 
+    console.log(this.video)
     this.api.getDefaultMedia().subscriptions.ended.subscribe(
       () => {
           // Set the video to the beginning

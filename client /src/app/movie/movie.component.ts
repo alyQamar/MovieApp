@@ -1,4 +1,7 @@
 import { Component , OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MovieService } from '../movie.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movie',
@@ -7,9 +10,28 @@ import { Component , OnInit } from '@angular/core';
   
 })
 export class MovieComponent  implements OnInit{
-  
-
+  movie:Object|any;
+  videos:any;
+  video?:string;
+  constructor(private api:MovieService,private route:ActivatedRoute) { }
   ngOnInit() {
+    let id= parseInt(this.route.snapshot.paramMap.get('id')!);
+    this.api.getMovie(id).subscribe({next:(data:any)=>{
+      this.movie = data
+
+    }})
+
+    // this.api.getVideo(id).subscribe({next:(data:any)=>{
+    //   this.videos = data
+    //  const value   =  Object.keys(this.videos[0]) as unknown as string;
+    //   this.video = this.videos[0][value]
+
+    // }})
+
+
+
+
+
 
     const lightbox = document.createElement('div');
     lightbox.id = 'lightbox';

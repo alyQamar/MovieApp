@@ -1,0 +1,320 @@
+<div class="container" >
+    <div class="row">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div style="background-image: url({{movies[0].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[0].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[0].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[0].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[0].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[0].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[0].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+
+          <div class="carousel-item ">
+            <div style="background-image: url({{movies[1].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[1].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[1].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[1].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[1].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[1].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[1].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+          <div class="carousel-item ">
+            <div style="background-image: url({{movies[2].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[2].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[2].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[2].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[2].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[2].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[2].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+          <div class="carousel-item ">
+            <div style="background-image: url({{movies[3].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[3].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[3].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[3].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[3].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[3].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[3].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+          <div class="carousel-item ">
+            <div style="background-image: url({{movies[4].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[4].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[4].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[4].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[4].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[4].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[4].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+          <div class="carousel-item ">
+            <div style="background-image: url({{movies[5].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[5].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[5].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[5].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[5].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[5].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[5].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+          <div class="carousel-item ">
+            <div style="background-image: url({{movies[6].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[6].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[6].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[6].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[6].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[6].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[6].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+          <div class="carousel-item ">
+            <div style="background-image: url({{movies[7].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[7].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[7].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[7].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[7].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[7].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[7].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+          <div class="carousel-item ">
+            <div style="background-image: url({{movies[8].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[8].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[8].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[8].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[8].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[8].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[8].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+          <div class="carousel-item ">
+            <div style="background-image: url({{movies[9].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[9].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[9].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[9].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[9].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[9].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[9].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+                    <div class="carousel-item ">
+            <div style="background-image: url({{movies[10].images[0]}}); " class="box_one  p-4 p-lg-5 mb-12">
+              <div class="col-12 all_atone  my-4 test  "  >
+                <div class="entry-poster text-center mb-4 mb-md-0">
+                  <a role="button" [routerLink]="['/movie',movies[10].id]" routerLinkActive="router-link-active" >
+                    <picture>
+                      <img [src]="movies[10].images[1]" class="img-fluid lazy" alt=""  >
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-8 col-12 ">
+                <div class="content-md">   
+                  <h3 class="font-size-24 font-size-md-30 font-weight-bold mb-0 mt-3 "><a role="button" class="text-white text-decoration-none"></a>{{movies[10].title}}</h3>
+                  <p class="entry-desc font-size-16  text-light  mb-0 mt-3">{{movies[10].story}}</p>
+                  <div class="buttons mt-4">
+                      <a [href]="movies[10].trailer" class="btn btn-dark rounded-pill"> Teaser </a>
+                      <a role="button" class="btn btn-dark rounded-pill  my-2 mx-2" [routerLink]="['/movie',movies[10].id]" routerLinkActive="router-link-active" >Watch now</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div> 
+          
+          
+        </div>
+
+      </div>
+      <div>
+        
+      </div>
+  </div> 
+
+  
+  <div class="mt-1" >
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-6 mb-12 py-2" *ngFor="let movie of movies">
+          <img [src]="movie.thumbnail" class="card-img-top" alt="movieimage" [routerLink]="['/movie',movie.id]" routerLinkActive="router-link-active" role="bu" >
+      </div>
+    </div> 
+  </div>
+
+
+ <div  class="text-center mt-5 mb-1"  >
+    <a  class="btn btn-more-section"  role="button">
+      <button type="button" class="btn btn-dark rounded-pill" routerLink="/movies">
+          <svg width="44px" height="32px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M512 1024C229.7 1024 0 794.3 0 512S229.7 0 512 0s512 229.7 512 512-229.7 512-512 512z m0-938.7C276.7 85.3 85.3 276.7 85.3 512S276.7 938.7 512 938.7 938.7 747.3 938.7 512 747.3 85.3 512 85.3z" fill="#3688FF"></path><path d="M469.3 704c-10.9 0-21.8-4.2-30.2-12.5-16.7-16.7-16.7-43.7 0-60.3L558.3 512 439.2 392.8c-16.7-16.7-16.7-43.7 0-60.3 16.7-16.7 43.7-16.7 60.3 0l149.3 149.3c16.7 16.7 16.7 43.7 0 60.3L499.5 691.5c-8.3 8.3-19.3 12.5-30.2 12.5z" fill="#5F6379"></path></g></svg> 
+          <span style="font-family: Georgia, 'Times New Roman', Times, serif;" class="fw-bold">More</span> 
+      </button>
+    </a> 
+ </div>
+ 
+</div>
